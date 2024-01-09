@@ -17,7 +17,7 @@ public class Line {
 		this.p2=p2;
 	}
 	public static void main(String[] args) {
-		System.out.println("Welcome to Line Comparison Computation Program");
+		System.out.println("Welcome to Line Comparison Computation Program: Using OOPs concept");
 		Point p1=new Point(1,3);
 		Point p2=new Point(201,4);
 		Line l=new Line(p1,p2);
