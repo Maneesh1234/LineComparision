@@ -19,7 +19,7 @@ public class Line {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Comparison Computation Program");
 		Point p1=new Point(1,3);
-		Point p2=new Point(0,4);
+		Point p2=new Point(2,0);
 		Line l=new Line(p1,p2);
 		System.out.println("Length of Line is : "+ l.calculateLengthofLine());
 		Point p3=new Point(4,5);
@@ -34,10 +34,12 @@ public class Line {
 		
 	}
 	public boolean checkEqualityOfLineUsingEquals(Line l2) {
-		String lengthOffirstline=Double.valueOf(this.calculateLengthofLine()).toString();
-		String lengthOf2ndLine=Double.valueOf(l2.calculateLengthofLine()).toString();
+//		String lengthOffirstline=Double.valueOf(this.calculateLengthofLine()).toString();
+//		String lengthOf2ndLine=Double.valueOf(l2.calculateLengthofLine()).toString();
+//		return lengthOffirstline.equals(lengthOf2ndLine);
+		Double lengthOffirstline=Double.valueOf(this.calculateLengthofLine());
+		Double lengthOf2ndLine=Double.valueOf(l2.calculateLengthofLine());
 		return lengthOffirstline.equals(lengthOf2ndLine);
-		
 	}
 	public double calculateLengthofLine() {
 		int x1=this.p1.x;
