@@ -34,9 +34,6 @@ public class Line {
 		
 	}
 	public boolean checkEqualityOfLineUsingEquals(Line l2) {
-//		String lengthOffirstline=Double.valueOf(this.calculateLengthofLine()).toString();
-//		String lengthOf2ndLine=Double.valueOf(l2.calculateLengthofLine()).toString();
-//		return lengthOffirstline.equals(lengthOf2ndLine);
 		Double lengthOffirstline=Double.valueOf(this.calculateLengthofLine());
 		Double lengthOf2ndLine=Double.valueOf(l2.calculateLengthofLine());
 		return lengthOffirstline.equals(lengthOf2ndLine);
