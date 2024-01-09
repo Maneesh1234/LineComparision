@@ -19,11 +19,11 @@ public class Line {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Comparison Computation Program");
 		Point p1=new Point(1,3);
-		Point p2=new Point(2,0);
+		Point p2=new Point(201,4);
 		Line l=new Line(p1,p2);
 		System.out.println("Length of Line is : "+ l.calculateLengthofLine());
-		Point p3=new Point(4,5);
-		Point p4=new Point(5,6);
+		Point p3=new Point(4,500);
+		Point p4=new Point(50,6);
 		Line l2=new Line(p3,p4);
 		if(l.checkEqualityOfLineUsingEquals(l2)){
 			System.out.println("Line are equal (Using Equals method)");
@@ -32,11 +32,29 @@ public class Line {
 			System.out.println("Line are not equal (Using Equals method)");
 		}
 		
+		System.out.println("Check Equality using  compareTo method ");
+		int comparision=l.checkEqualityOfLineUsingCompareTo(l2);
+		
+		if(comparision==0){
+			System.out.println("Line are equal "+comparision);
+		}
+		else if (comparision>0){
+			System.out.println("First line is long  "+comparision);
+		}
+		else if (comparision<0){
+			System.out.println("Second line is long "+comparision);
+		}
+		
 	}
 	public boolean checkEqualityOfLineUsingEquals(Line l2) {
 		Double lengthOffirstline=Double.valueOf(this.calculateLengthofLine());
 		Double lengthOf2ndLine=Double.valueOf(l2.calculateLengthofLine());
 		return lengthOffirstline.equals(lengthOf2ndLine);
+	}
+	public int checkEqualityOfLineUsingCompareTo(Line l2) {
+		Double lengthOffirstline=Double.valueOf(this.calculateLengthofLine());
+		Double lengthOf2ndLine=Double.valueOf(l2.calculateLengthofLine());
+		return lengthOffirstline.compareTo(lengthOf2ndLine);
 	}
 	public double calculateLengthofLine() {
 		int x1=this.p1.x;
